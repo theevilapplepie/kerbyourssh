@@ -5,7 +5,7 @@
 ##
 
 # Specify the path to the s.conf file
-S_CONFIG="s.conf"
+S_CONFIG="~/.s.conf"
 
 ### Do not modify below line
 

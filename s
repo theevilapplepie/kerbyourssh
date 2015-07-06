@@ -124,12 +124,13 @@ if [ -n "$CONFIGCHANGE" ]; then
 fi
 
 # Do we need to Login?
-if [ -z "`klist | grep krbtgt | grep -i "$REALM" | grep -vi expired`" ]; then
+if [ -z "`klist 2>&1 | grep krbtgt | grep -i "$REALM" | grep -vi expired`" ]; then
   echo -e "Welcome $S_USER, You require a login."
   loggedin=""
   while [ -z "$loggedin" ]; do
     env KRB5_CONFIG="$KRB5CONF" kinit $S_USER@$REALM
     if [ $? -eq 0 ]; then
+      echo -e "Successfully logged in!\n";
       loggedin="yes"
     fi
   done

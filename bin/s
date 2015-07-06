@@ -5,7 +5,7 @@ REALM="EXAMPLE.REALM"
 
 if [ -z "`klist | grep krbtgt | grep -vi expired`" ]; then
   echo -e "Welcome $USER! Start of the day eh? Lets get you logged in ;)"
-  env KRB5_CONFIG="~/bin/s_support/krb5.conf" kinit $USER@$realm
+  env KRB5_CONFIG="~/bin/s_support/krb5.conf" kinit $USER@$REALM
 fi
 echo "Logging into $1 as $USER"
 env KRB5_CONFIG="~/bin/s_support/krb5.conf" ssh $USER@$1

@@ -158,7 +158,7 @@ fi
 
 # Log into server
 echo -e "Logging into $SERVER as $S_USER\n"
-env KRB5_CONFIG="$KRB5CONF" ssh $S_USER@$SERVER
+env KRB5_CONFIG="$KRB5CONF" ssh $SSH_OPTS $S_USER@$SERVER
 
 # Clean up ;)
 rm -f "$KRB5CONF"

@@ -1,2 +1,2 @@
 Simply grant s executable rights and place in path to utilize the binary.
-To configure, Create update the s.conf template and copy to ~/.s.conf
+To configure, Copy the s.conf template to ~/.s.conf and update for your environment.

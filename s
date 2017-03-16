@@ -145,7 +145,7 @@ else
   for suffix in $MACHINEDOMAINENTRY $MACHINESEARCHENTRIES $MACHINEHOSTNAMETLD $DEFAULT_DOMAINS; do
     HOSTRESULT="`host "$USERSERVER.$suffix"`"
     if [ $? -eq 0 ]; then
-      $SERVER="`echo "$HOSTRESULT" | awk '{ print $1 }'`"
+      SERVER="`echo "$HOSTRESULT" | awk '{ print $1 }'`"
       break
     fi
   done
